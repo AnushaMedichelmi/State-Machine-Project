@@ -106,7 +106,7 @@ public class Idle : State
             nextState = new patroll(npc,agent,animator,playerPosition);
             eventStage = EVENTS.EXIT;
         }
-        base.UpdateMethod();
+       // base.UpdateMethod();
     }
 
     public override void ExitMethod()
@@ -130,7 +130,7 @@ public class patroll:State
     public override void EnterMethod()
     {
         animator.SetTrigger("isWalking");
-        currentIndex = 0;
+        //currentIndex = 0;
         base.EnterMethod();
     }
 
@@ -149,12 +149,12 @@ public class patroll:State
             agent.SetDestination(GameController.Instance.Checkpoints[currentIndex].transform.position);
         }
             
-        base.UpdateMethod();
+       // base.UpdateMethod();
     }
 
     public override void ExitMethod()
     {
-        animator.ResetTrigger("isIdle");
+        animator.ResetTrigger("isWalking");
         base.ExitMethod();
     }
 }

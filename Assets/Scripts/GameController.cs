@@ -14,7 +14,7 @@ using UnityEngine;
             if (instance == null)
             {
                 instance = new GameController();
-                instance.Checkpoints.AddRange(GameObject.FindGameObjectsWithTag("Checkpoints"));
+                instance.Checkpoints.AddRange(GameObject.FindGameObjectsWithTag("Checkpoint"));
             }
 
             return instance;
